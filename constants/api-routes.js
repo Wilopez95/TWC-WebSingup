@@ -1,0 +1,52 @@
+const urls = {
+  PLANS: '/channel/US/webchooseplan?=',
+  TOKEN: '/token',
+  SUBSCRIPTION: '/subscribe',
+  PASSCODE: '/passwordless/start',
+  LOGIN: '/oauth/token',
+  ACTIVE_SUBSCRIPTION: '/subscriptions/users/active_subscriptions',
+  HISTORY_SUBSCRIPTION: '/subscriptions/purchases',
+  UPDATE_SUBSCRIPTION: '/subscriptions/payment/update',
+  CHANGE_PLAN: '/subscriptions/users/subscribe_to/',
+  CANCEL_SUBSCRIPTION: '/subscriptions/users/cancel',
+  PRODUCTS: '/subscriptions/users/products',
+  CREATE_PAYMENT: '/subscriptions/users/create_with_payment',
+  SUBSCRIPTION_TO: '/subscriptions/users/import/subscribe_to/',
+  ONBOARDING: '/channel/US/webonboarding',
+  FAQ: '/channel/US/webfaq',
+  BILLING: '/pages/account-billing',
+  PRICING: '/pages/plans-pricing',
+  DEVICES: '/pages/supported-devices',
+  ACCESSIBILITY: '/pages/accessibility',
+  CAPTIONING: '/pages/closed-captioning',
+  CONTACT: '/pages/contact-us',
+  AGREEMENT: '/pages/visitor-agreement',
+  POLICY: '/pages/privacy-policy',
+  CCPA: '/pages/ccpa',
+  INFORMATION: '/pages/do-not-sell-my-information',
+  SUBSCRIPTIONS_SUMMARY: '/subscriptions/summary'
+};
+
+const apiKeys = {
+  TOKEN: 'get-token',
+  PLANS: 'get-plans',
+  SUBSCRIPTION: 'post-subscription',
+  LOGIN: 'get-login',
+  ACTIVE_SUBSCRIPTION: 'get-subscription',
+  HISTORY_SUBSCRIPTION: 'get-history',
+  ONBOARDING: 'get-onboarding',
+  FAQ: 'get-faq',
+  BILLING: 'get-billing',
+  PRICING: 'get-pricing',
+  DEVICES: 'get-devices',
+  ACCESSIBILITY: 'get-accessibility',
+  CAPTIONING: 'get-captioning',
+  CONTACT: 'get-contact',
+  AGREEMENT: 'get-agreement',
+  POLICY: 'get-policy',
+  CCPA: 'get-ccpa',
+  INFORMATION: 'get-information',
+  SUBSCRIPTIONS_SUMMARY: 'get-subscriptions'
+};
+
+export { urls, apiKeys };

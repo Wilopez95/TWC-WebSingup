@@ -1,0 +1,33 @@
+{
+    "general" : {
+        "logoOverride" : "https://f9q4g5j6.ssl.hwcdn.net/mediaassets/61e5c11a1061d67f6d3cbbc8", 
+        "ldlMessage" : null
+    },
+    "dsp" : {
+        "roku" : {
+            "twcLive" : "https://api.myspotlight.tv/video/play/6196b7f7afac453e6c5568c2/1920/1080",
+            "onboarding" : "https://api.myspotlight.tv/channel/US/connectedonboarding", 
+            "choosePlan" : "https://api.myspotlight.tv/channel/US/connectedchooseplan",
+            "onDemandHome" : "https://api.myspotlight.tv/homepage/us/TWCPlusTest"
+        }, 
+        "react" :  {
+            "twcLive" : "https://api.myspotlight.tv/video/play/6196b7f7afac453e6c5568c2/1920/1080",
+            "onboarding" : "https://api.myspotlight.tv/channel/US/connectedonboarding",
+            "choosePlan" : "https://api.myspotlight.tv/channel/US/connectedchooseplan",
+            "onDemandHome" : "https://api.myspotlight.tv/homepage/us/TWCPlusTest"
+        }, 
+        "web" :  {
+            "onboarding" : "https://api.myspotlight.tv/channel/US/webonboarding",
+            "choosePlan" : "https://api.myspotlight.tv/channel/US/webchooseplan",
+            "wallpaper" : "https://f9q4g5j6.ssl.hwcdn.net/mediaassets/623cb5afca7dd54db56f4a56",
+            "monthlyCost": "$2.99",
+            "yearlyCost": "$29.99",
+            "copyright": "© 2022 Weather Group Television, LLC"
+
+        }
+    }, 
+    "localNow" : {
+        "anf" : "",
+        "location" : ""
+    }
+}

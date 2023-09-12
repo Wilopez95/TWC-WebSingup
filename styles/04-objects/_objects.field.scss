@@ -1,0 +1,203 @@
+.field {
+  @include flexbox;
+  @include flex-direction(column);
+
+  margin: 0;
+  width: 100%;
+
+  &--sx {
+    width: 30%;
+    max-width: 122px;
+    margin: 0 2% 0 0;
+
+    @include inline-flex;
+
+    @include bp-large {
+      min-width: 145px;
+    }
+  }
+
+  &--sx-modal {
+    width: 30%;
+    max-width: 122px;
+    margin: 0 2% 0 0;
+  }
+
+  @include bp-medium {
+    margin: 0 2% 0 0;
+
+    &--sm {
+      width: 34%;
+    }
+
+    &--md {
+      width: 40%;
+    }
+
+    &--xl {
+      max-width: 395px;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @include flexbox;
+    @include flex-direction(column);
+
+    width: 100%;
+
+    &--checkbox {
+      @include flex-direction(row);
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+    color: $white;
+    font-size: calculate-rem(15);
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    padding-bottom: 6px;
+
+    @include flexbox;
+    @include justify-content(space-between);
+
+    &__text {
+      @include flexbox;
+      @include flex-direction(row);
+    }
+
+    &__obligatory {
+      color: $red;
+    }
+
+    &--checkbox {
+      order: 2;
+      padding-bottom: 0;
+      font-size: calculate-rem(12);
+
+      @include bp-medium {
+        font-size: calculate-rem(20);
+      }
+    }
+  }
+
+  &__input {
+    background: $light-white;
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    border: 1px solid $black-pearl;
+    color: $black-pearl;
+    font-size: calculate-rem(15);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    height: 48px;
+    min-width: 100%;
+    border-radius: 6px;
+
+    &:focus {
+      outline: 2px solid $sinbad;
+    }
+
+    @include bp-medium {
+      min-width: initial;
+    }
+
+    &--checkbox {
+      order: 1;
+      height: auto;
+      margin: auto 10px auto 0;
+      min-width: initial;
+    }
+  }
+
+  &__options {
+
+    &--hide {
+      display: none;
+    }
+
+    @include flexbox;
+    @include flex-direction(column);
+
+    border-radius: 6px;
+    min-width: 100%;
+    z-index: 10;
+    margin-top: 1px;
+    background-color: $light-white;
+    height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+    font-family: $roboto-regular;
+
+    &__button {
+      height: 60px;
+      width: 100%;
+      font-size: calculate-rem(20);
+      text-align: start;
+      padding: 15px 25px;
+
+      @include bp-medium {
+        padding: 20px 25px;
+      }
+    }
+  }
+
+  &__textarea {
+    background: $light-white;
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    border: 1px solid $black-pearl;
+    color: $black-pearl;
+    font-size: calculate-rem(15);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    height: 161px;
+  }
+
+  &__select {
+    background: $light-white;
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    border: 1px solid $black-pearl;
+    color: $black-pearl;
+    font-size: calculate-rem(15);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    height: 54px;
+    border-radius: 4px;
+  }
+
+  &__error {
+    color: $red;
+    font-size: calculate-rem(12);
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    padding-top: 4px;
+    min-height: 53px;
+
+    @include bp-medium {
+      min-height: 40px;
+    }
+  }
+
+  &__tooltip {
+    font-size: 12px !important;
+    text-transform: none;
+    max-width: 187px;
+    box-shadow: 0 0 10px #0006;
+    border-radius: 6px;
+  }
+
+  &__tooltip-header {
+    font-size: 14px;
+    color: #1b2433;
+    margin-bottom: 3px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: $white;
+  }
+}

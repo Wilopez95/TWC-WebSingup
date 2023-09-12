@@ -1,0 +1,20 @@
+.background-image {
+
+  &__image {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  &__picture {
+    position: fixed;
+    display: none;
+    z-index: 0;
+    right: 0;
+    min-height: 100vh;
+    min-width: 1000px;
+
+    @include bp-large {
+      display: block;
+    }
+  }
+}

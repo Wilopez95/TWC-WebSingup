@@ -1,0 +1,6 @@
+.skeleton {
+  @include animation-mixin;
+
+  background-color: $skeleton-background;
+  animation: pulse 1.5s ease-in-out 0.5s infinite;
+}

@@ -1,0 +1,36 @@
+.login {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  color: $white;
+  width: 100%;
+
+  &__title {
+    @include bp-medium {
+      font-size: calculate-rem(36);
+    }
+  }
+
+  &__container {
+    margin-top: 38px;
+
+    @include bp-medium {
+      margin-bottom: 135px;
+    }
+
+    @include bp-medium {
+      max-width: 540px;
+      margin-top: 48px;
+    }
+
+    &--button {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    &--conditions {
+      font-size: calculate-rem(12);
+      margin-top: 22px;
+      line-height: 18px;
+    }
+  }
+}

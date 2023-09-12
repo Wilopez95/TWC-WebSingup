@@ -1,0 +1,99 @@
+.stream-devices {
+  @include flexbox;
+  @include flex-direction(column);
+
+  margin-bottom: 56px;
+
+  @include bp-medium {
+    max-width: 644px;
+  }
+
+  &__roku {
+    height: 22.02px;
+    width: 70.92px;
+
+    @include bp-large {
+      height: 36px;
+      width: 116px;
+    }
+  }
+
+  &__amazon {
+    height: 20.63px;
+    width: 97.36px;
+
+    @include bp-large {
+      height: 34px;
+      width: 160px;
+    }
+  }
+
+  &__android {
+    height: 20.66px;
+    width: 97.36px;
+
+    @include bp-large {
+      height: 27.1px;
+      width: 160px;
+    }
+  }
+
+  &__vizio {
+    height: 18px;
+    width: 78px;
+
+    @include bp-large {
+      height: 29px;
+      width: 129px;
+    }
+  }
+
+  &__samsung {
+    height: 15px;
+    width: 97px;
+
+    @include bp-large {
+      height: 25px;
+      width: 150px;
+    }
+  }
+
+  &__xfinity {
+    height: 19px;
+    width: 96px;
+
+    @include bp-large {
+      height: 33px;
+      width: 163px;
+    }
+  }
+
+  &__row {
+    margin-top: 65px;
+
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-around);
+
+    @include bp-medium {
+      @include justify-content(space-between);
+    }
+  }
+
+  &__row-2 {
+    margin-top: 65px;
+
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-around);
+  }
+
+  &__container {
+    width: 98px;
+    height: auto;
+
+    @include bp-large {
+      width: 165px;
+    }
+  }
+}

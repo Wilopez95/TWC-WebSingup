@@ -1,0 +1,225 @@
+.home {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  height: 800px;
+
+  @media only screen and (min-width: 1200px) {
+    height: 95vh;
+  }
+
+  &__image {
+    min-width: 100vw;
+    height: 800px;
+
+    @media only screen and (min-width: 1200px) {
+      height: 95vh;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    right: 0;
+    height: 50vh;
+    margin-top: 88px;
+
+    @include bp-medium {
+      height: 800px;
+      margin-top: 0;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      height: 100vh;
+    }
+  }
+
+  &__title-container {
+    margin-top: 120px;
+    max-width: 800px;
+
+    &__title {
+      color: $white;
+      font-family: $roboto-bold-family;
+      font-size: calculate-rem(40);
+      text-transform: uppercase;
+      text-align: left;
+      position: relative;
+      display: inline;
+
+      @media only screen and (min-width: 400px) {
+        font-size: calculate-rem(45);
+      }
+
+      @include bp-medium {
+        font-size: calculate-rem(54);
+        line-height: 84px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(72);
+      }
+    }
+
+    &__title::after {
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      width: 100%;
+      height: 1px;
+      border-top: 12px solid $light-blue;
+      border-radius: 6px;
+      content: '';
+      margin-top: 5px;
+
+      @-moz-document url-prefix('') {
+        border-top: 12px solid $transparent;
+      }
+    }
+  }
+
+  &__body-container {
+    margin-top: 27px;
+    max-width: 624px;
+
+    @include bp-medium {
+      margin-top: 35px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      margin-top: 67px;
+    }
+
+    &__text {
+      font-size: calculate-rem(20);
+      line-height: 30px;
+      text-align: left;
+      color: $white;
+      opacity: 0.6;
+
+      @include bp-medium {
+        font-size: calculate-rem(22);
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(24);
+      }
+    }
+  }
+
+  &__free-trial-container {
+    @include flexbox;
+    @include flex-direction(column);
+
+    width: 100%;
+    margin-top: 26px;
+
+    @include bp-medium {
+      max-width: 540px;
+      margin-top: 18px;
+    }
+
+    @include bp-medium {
+      margin-top: 9px;
+    }
+
+    &__text {
+      color: $white;
+      font-size: calculate-rem(15);
+      text-align: left;
+      margin-bottom: 20px;
+
+      @include bp-medium {
+        font-size: calculate-rem(17);
+        margin-bottom: 15px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(18);
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__login-container {
+    color: $white;
+    margin-top: 35px;
+
+    @include bp-medium {
+      margin-top: 40px;
+    }
+
+    @media only screen and (min-width: 444px) {
+      margin-top: 70px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      margin-top: 52px;
+    }
+
+    &__text {
+      font-size: calculate-rem(16);
+      text-align: left;
+      color: $white;
+
+      @include bp-medium {
+        font-size: calculate-rem(17);
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(18);
+      }
+    }
+
+    &__button {
+      @include flexbox;
+      @include flex-direction(column);
+
+      max-width: 236px;
+      margin-top: 22px;
+      background-color: $midnight;
+
+      @include bp-medium {
+        margin-top: 10px;
+        background-color: $transparent;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        margin-top: 11px;
+      }
+    }
+
+    &__button-red {
+      font-size: calculate-rem(20);
+
+      @include bp-medium {
+        font-size: calculate-rem(25);
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(30);
+      }
+    }
+
+    &__conditional-text {
+      max-width: 421px;
+      margin: 20px 0 30px;
+      font-size: calculate-rem(13);
+      text-align: left;
+      line-height: 18px;
+
+      @include bp-medium {
+        max-width: 700px;
+      }
+
+      @media only screen and (min-width: 444px) {
+        margin: 30px 0 55px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        font-size: calculate-rem(12);
+        margin: 22px 0 80px;
+      }
+    }
+  }
+}

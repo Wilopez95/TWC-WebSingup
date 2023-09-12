@@ -1,0 +1,10 @@
+.weather-image-skeleton {
+  width: 90px;
+  height: 90px;
+  margin: 19px 0 39px;
+  align-self: flex-start;
+
+  @include bp-medium {
+    margin: 72px 0 46px;
+  }
+}

@@ -1,0 +1,15 @@
+/**
+ * Breakpoints: Mixins
+ */
+
+@mixin bp-medium {
+  @media only screen and (min-width: $min-width-tablet) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (min-width: $min-width-desktop) {
+    @content;
+  }
+}

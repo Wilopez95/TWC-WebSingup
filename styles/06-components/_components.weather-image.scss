@@ -1,0 +1,41 @@
+.weather-image {
+
+  &__button {
+    background: transparent;
+    position: relative;
+    height: auto;
+    align-self: flex-start;
+    margin: 19px 0 39px;
+    max-height: 90px;
+
+    @include bp-medium {
+      margin: 72px 0 46px;
+    }
+  }
+
+  &__button-disable {
+    pointer-events: none;
+  }
+
+  &__image {
+    position: relative;
+    height: auto;
+    align-self: flex-start;
+    margin: 19px 0 39px;
+    min-height: 90px;
+
+    @include bp-medium {
+      margin: 72px 0 46px;
+    }
+  }
+
+  &__picture {
+    margin: 0 auto;
+    width: 90px;
+  }
+
+  &__small-picture {
+    margin: 0 auto;
+    width: 50px;
+  }
+}

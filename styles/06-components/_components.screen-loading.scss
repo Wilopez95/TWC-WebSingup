@@ -1,0 +1,56 @@
+.screen-loading {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  color: $white;
+  width: 100%;
+  padding-top: 250px;
+
+  &__icon-container {
+    @include flexbox;
+    @include justify-content(center);
+
+    margin-top: 39px;
+
+    &--circle {
+      width: 102px;
+      height: 102px;
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+
+      @-moz-keyframes spin {
+
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @-webkit-keyframes spin {
+
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  &__message {
+    font-size: calculate-rem(24);
+    text-align: center;
+    margin-top: 28px;
+
+    @include bp-medium {
+      line-height: 30px;
+      margin: 0;
+      margin-top: 28px;
+    }
+  }
+}

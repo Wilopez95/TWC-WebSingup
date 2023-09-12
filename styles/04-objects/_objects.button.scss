@@ -1,0 +1,94 @@
+/**
+ * Button
+ */
+
+.button {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  padding: 16.5px 26px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $sinbad;
+  color: $white;
+  font-size: calculate-rem(15);
+  font-family: $roboto-bold-family;
+  cursor: pointer;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $sinbad-hover;
+  }
+
+  @include bp-medium {
+    font-size: calculate-rem(15);
+    padding: 16.5px 31px;
+
+    &--sx {
+      width: 12%;
+    }
+
+    &--sm {
+      width: 34%;
+    }
+
+    &--md {
+      width: 48%;
+    }
+  }
+
+  &__loader {
+    height: 18px;
+    position: absolute;
+    left: calc(50% - 18px / 2);
+  }
+
+  &--disabled {
+    opacity: 0.75;
+    cursor: default;
+    background-color: #1f7bb8;
+  }
+
+  &--red {
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+      background-color: $red-hover;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $sinbad;
+    padding: 14.5px 26px;
+    border: 2px solid $sinbad;
+
+    &:hover {
+      background-color: $white;
+      color: $sinbad-hover;
+      border-color: $sinbad-hover;
+    }
+  }
+
+  &--none {
+    background-color: transparent;
+    color: $white;
+    padding: 14.5px 26px;
+    border: 2px solid $white;
+  }
+
+  &--none:hover {
+    background-color: transparent;
+  }
+
+  &--transparent {
+    color: $transparent;
+
+    .button--underline::after {
+      display: none;
+    }
+  }
+}

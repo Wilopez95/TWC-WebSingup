@@ -1,0 +1,87 @@
+/**
+ * Modifiers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden-mobile {
+  display: none !important;
+
+  @include bp-medium {
+    display: block !important;
+  }
+}
+
+.inline-hidden-mobile {
+  display: none !important;
+
+  @include bp-medium {
+    display: inline !important;
+  }
+}
+
+.visible-mobile {
+  display: block !important;
+
+  @include bp-medium {
+    display: none !important;
+  }
+}
+
+.mobile-modal-open {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-overlay-open {
+  overflow: hidden;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Animations */
+
+.rotate30 {
+  @include transform(rotate(30deg));
+  @include transition(all 100ms ease-out);
+}
+
+.rotate150 {
+  @include transform(rotate(150deg));
+  @include transition(all 100ms ease-out);
+}
+
+.rotate45 {
+  @include transform(rotate(45deg));
+  @include transition(all 100ms ease-out);
+}
+
+.rotate135 {
+  @include transform(rotate(135deg));
+  @include transition(all 100ms ease-out);
+}
+
+.collapse {
+  @include transition(all 70ms ease-out);
+
+  top: 10px;
+}

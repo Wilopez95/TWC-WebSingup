@@ -1,0 +1,433 @@
+@use 'sass:math';
+
+/**
+ * Utils
+ */
+
+/* Transitions */
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/*
+Usage:
+
+a {
+  color: gray;
+  @include transition(color .3s ease);
+
+  &:hover {
+    color: black;
+  }
+}
+*/
+
+/* Transforms */
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transform-important($transforms) {
+  -moz-transform: $transforms !important;
+  -o-transform: $transforms !important;
+  -ms-transform: $transforms !important;
+  -webkit-transform: $transforms !important;
+  transform: $transforms !important;
+}
+
+/*
+Usage:
+
+.rotate135 {
+    @include transform(rotate(135deg));
+}
+*/
+
+/* Opacity */
+@mixin opacity($opacity) {
+  $opacity-ie: $opacity * 100;
+
+  filter: alpha(opacity = $opacity-ie); // IE8
+  -khtml-opacity: $opacity; // Safari 1.x
+  opacity: $opacity;
+}
+
+/*
+Usage:
+
+.faded-text {
+  @include opacity(0.8);
+}
+*/
+
+/* Box Sizing */
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+/*
+Usage:
+
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+*/
+
+/* Border Radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; /* stops background color from leaking outside the border: */
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+/*
+Usage:
+
+.button {
+    @include border-radius(5px);
+}
+
+.submit-button {
+    @include border-top-radius(10px);
+    @include border-right-radius(8px);
+    @include border-bottom-radius(10px);
+    @include border-left-radius (6px);
+}
+*/
+
+/* Linear Gradient */
+@mixin linear-gradient(
+  $start-vpoint,
+  $start-hpoint,
+  $end-vpoint,
+  $start-color,
+  $start-opacity,
+  $end-color,
+  $end-opacity
+) {
+  background: -moz-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+  background: -webkit-gradient(
+    $start-hpoint $start-vpoint,
+    $start-hpoint $end-vpoint,
+    color-stop($start-opacity, $start-color),
+    color-stop($end-opacity, $end-color)
+  );
+  background: -webkit-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+  background: -o-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+  background: -ms-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+  background: linear-gradient(
+    to $end-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+}
+
+/*
+Usage:
+
+.abs {
+    @include linear-gradient(top, left, bottom, $transparent, 0%, $black-semi-transparent, 70%);
+}
+*/
+
+@mixin linear-gradient-two-breaks(
+  $start-vpoint,
+  $start-hpoint,
+  $end-vpoint,
+  $start-color,
+  $start-opacity,
+  $break-one-color,
+  $break-one-opacity,
+  $break-two-color,
+  $break-two-opacity,
+  $end-color,
+  $end-opacity
+) {
+  background: -moz-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $end-color $end-opacity
+  );
+  background: -webkit-gradient(
+    $start-hpoint $start-vpoint,
+    $start-hpoint $end-vpoint,
+    color-stop($start-opacity, $start-color),
+    color-stop($break-one-color $break-one-opacity),
+    color-stop($break-two-color $break-two-opacity),
+    color-stop($end-opacity, $end-color)
+  );
+  background: -webkit-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $break-one-color $break-one-opacity,
+    $break-two-color $break-two-opacity,
+    $end-color $end-opacity
+  );
+  background: -o-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $break-one-color $break-one-opacity,
+    $break-two-color $break-two-opacity,
+    $end-color $end-opacity
+  );
+  background: -ms-linear-gradient(
+    $start-vpoint,
+    $start-color $start-opacity,
+    $break-one-color $break-one-opacity,
+    $break-two-color $break-two-opacity,
+    $end-color $end-opacity
+  );
+  background: linear-gradient(
+    to $end-vpoint,
+    $start-color $start-opacity,
+    $break-one-color $break-one-opacity,
+    $break-two-color $break-two-opacity,
+    $end-color $end-opacity
+  );
+}
+
+/*
+Usage:
+
+.abs {
+    @include linear-gradient-two-breaks(top, left, bottom, $transparent, 0%, $transparent, 20%, $black-semi-transparent, 70%, $black-semi-transparent, 100%);
+}
+*/
+
+/* Aspect Ratio */
+@mixin aspect-ratio($width, $height, $content-class) {
+  position: relative;
+
+  &::before {
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+    content: '';
+  }
+
+  .#{$content-class} {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*
+Usage:
+
+.sixteen-nine {
+    @include aspect-ratio(16, 9, 'content');
+}
+*/
+
+/* Font Face */
+@mixin font-face($font-family) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('./fonts/#{$font-family}.eot'),
+      url('./fonts/#{$font-family}.woff') format('woff'),
+      url('./fonts/#{$font-family}.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+  }
+}
+
+/*
+Usage:
+
+@include font-face(Antenna-Bold);
+*/
+
+/* Calculate REM */
+// This function returns the font size in rem.
+// Reasons to use rem: https://css-tricks.com/rems-ems/
+@function calculate-rem($size-value: $default-font-size) {
+  $rem-size: math.div($size-value, $default-font-size);
+
+  @return #{$rem-size}rem;
+}
+
+/*
+Usage:
+
+body {
+    font-size: calculate-rem(12);
+}
+*/
+
+/* Center Block */
+%center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*
+Usage:
+
+.footer-wrap {
+    width: 450px;
+    @extend %center-block;
+}
+*/
+
+/* Text Overflow */
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%text-truncate-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+Usage:
+
+.text-truncate {
+    @extend %text-truncate;
+}
+*/
+
+/* Box Shadow */
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    -moz-box-shadow: inset $top $left $blur $size $color;
+    -webkit-box-shadow: inset $top $left $blur $size $color;
+    box-shadow: inset $top $left $blur $size $color;
+  }
+
+  @else {
+    -moz-box-shadow: $top $left $blur $size $color;
+    -webkit-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+  }
+}
+
+/*
+Usage:
+
+.box-shadow {
+    @include box-shadow(1px,1px,1px,0, #fff, true);
+}
+*/
+
+/* Focus */
+@mixin focus($color) {
+
+  &:focus {
+    outline: 2px solid $color;
+  }
+
+  &:focus-visible {
+    outline-color: $color;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+  }
+}
+
+
+/*
+Usage:
+
+.focused-element {
+    @include focus($blue);
+}
+*/
+
+/* keyframes: moveDown */
+@keyframes moveDown {
+
+  from {
+    @include transform(translateY(-5rem));
+  }
+
+  to {
+    @include transform(translateY(0));
+  }
+}
+
+/*
+Usage:
+  animation: moveDown 0.3s ease-in-out;
+*/
+
+/* keyframes: moveDown */
+@keyframes moveUp {
+
+  from {
+    @include transform(translateY(5rem));
+  }
+
+  to {
+    @include transform(translateY(0));
+  }
+}
+
+/*
+Usage:
+  animation: moveDown 0.3s ease-in-out;
+*/

@@ -1,0 +1,56 @@
+.chooseplan {
+  width: 100%;
+  max-width: 624px;
+  padding: 20px 0;
+  color: $white;
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+
+  &__title {
+    padding: 0 0 2px 0;
+    font-size: calculate-rem(36);
+  }
+
+  &__subtitle {
+    font-size: calculate-rem(16);
+    opacity: 60%;
+    max-width: 320px;
+
+    @include bp-medium {
+      max-width: 100%;
+    }
+  }
+
+  &__plan {
+    max-width: 540px;
+    padding: 35px 0 46px 0;
+
+    @include bp-medium {
+      padding: 50px 0 67px 0;
+    }
+  }
+
+  &--button {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 0 22px 0;
+  }
+
+  &--text {
+    max-width: 470px;
+    margin: 0 0 10px 0;
+  }
+
+  &__error {
+    color: $red;
+    font-size: calculate-rem(14);
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    padding-top: 4px;
+    min-height: 53px;
+
+    @include bp-medium {
+      min-height: 40px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "title": "The Weather Channel TV App",
+    "subtitle": "Live weather coverage 24/7, local forecasts, alerts, interactive radar, maps and shows on-demand.",
+    "freeTrial":{
+        "text": "Experience for 7 days free then as little as $x.xx/month.",
+        "buttonText": "START 7-DAY FREE TRIAL",
+        "href": "/subscription"
+    },
+    "login":{
+        "text":"Existing subscribers, log in to manage your account.",
+        "buttonText": "LOG IN",
+        "conditionalText": "If you subscribed through your television device, like Roku, FireTV, or Android TV, please manage your subscription on that device.",
+        "href": "/signin"
+    }
+}

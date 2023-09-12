@@ -1,0 +1,104 @@
+/**
+ * Default
+ */
+
+/* Very important for parallax to work */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  font-size: $default-font-size + px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+li::selection {
+  background-color: $black;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+picture {
+  font-size: 0;
+}
+
+button {
+  border: 0;
+}
+
+form {
+  background-color: $white;
+}
+
+select {
+  @include border-radius(0);
+
+  outline: 0;
+  border: 0;
+}
+
+img {
+  pointer-events: none;
+}
+
+// Removing spiner on numeric inputs
+
+input {
+  @include focus($shadow);
+
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+// Removing IE specific input clear and show
+
+::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+::-ms-reveal {
+  width: 0;
+  height: 0;
+}
+
+// Adding specific focus to all cickable elements
+
+a,
+button,
+svg,
+textarea,
+select {
+  @include focus($shadow);
+}

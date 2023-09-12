@@ -1,0 +1,56 @@
+.success {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  color: $white;
+  width: 100%;
+
+  &__icon-container {
+    @include flexbox;
+    @include justify-content(center);
+
+    margin-top: 39px;
+
+    @include bp-medium {
+      max-width: 605px;
+      margin-top: 42px;
+    }
+
+    &--circle {
+      width: 193px;
+      height: 193px;
+      stroke: $white;
+    }
+  }
+
+  &__title {
+    font-size: calculate-rem(30);
+    text-align: center;
+    margin-top: 53px;
+
+    &--part {
+      display: block;
+
+      @include bp-medium {
+        display: inline;
+      }
+    }
+
+    @include bp-medium {
+      font-size: calculate-rem(36);
+      text-align: left;
+      margin-top: 59px;
+    }
+  }
+
+  &__message {
+    font-size: calculate-rem(18);
+    text-align: center;
+    margin-top: 6px;
+
+    @include bp-medium {
+      text-align: left;
+      line-height: 30px;
+      max-width: 729px;
+    }
+  }
+}

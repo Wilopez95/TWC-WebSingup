@@ -1,0 +1,107 @@
+.update-payment {
+  color: $white;
+  width: 100%;
+
+  &__status {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    &__icon {
+      height: 120px;
+      width: 120px;
+      stroke: $deep;
+      margin-top: 58px;
+
+      @include bp-medium {
+        margin-top: 30px;
+      }
+    }
+
+    &__title {
+      font-size: calculate-rem(30);
+      font-family: $roboto-medium;
+      margin: 30px 0 12px;
+      text-align: center;
+    }
+
+    &__body {
+      font-size: calculate-rem(18);
+      font-family: $roboto-family;
+      text-align: center;
+      line-height: 1.5;
+
+      @include bp-medium {
+        max-width: 332px;
+      }
+    }
+
+    &--buttons {
+      width: 100%;
+      margin-top: 43px;
+
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(center);
+
+      @include bp-medium {
+        margin-top: 59px;
+
+        @include justify-content(space-between);
+        @include flex-direction(row);
+      }
+
+      &__button {
+        margin-bottom: 18px;
+        width: 72%;
+
+        @include bp-medium {
+          margin-bottom: 48px;
+          width: 48%;
+        }
+      }
+    }
+
+    &__card {
+      @include flexbox;
+      @include flex-direction(row);
+
+      padding-top: 30px;
+
+      &__icon {
+        height: 42px;
+      }
+
+      &__number {
+        font-size: calculate-rem(22);
+        color: $deep;
+        margin-left: 18px;
+        font-family: $roboto-medium-family;
+        margin-top: 3px;
+
+        @include bp-medium {
+          font-size: calculate-rem(26);
+        }
+
+        @include bp-large {
+          font-size: calculate-rem(30);
+        }
+      }
+    }
+
+    &--closeButton {
+      margin: 45px 0 30px;
+      width: 42%;
+
+      @include bp-medium {
+        width: 100%;
+      }
+    }
+  }
+
+  &--modifier {
+    color: $deep;
+    font-family: $roboto-family;
+    margin-top: 22px;
+  }
+}

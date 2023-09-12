@@ -1,0 +1,14 @@
+.main-body {
+  min-height: 100vh;
+
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+
+  @include bp-medium {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}

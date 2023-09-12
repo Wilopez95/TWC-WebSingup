@@ -1,0 +1,134 @@
+.subscription-modal {
+  font-family: $roboto-family;
+  margin-top: 30px;
+
+  @include flexbox;
+  @include flex-direction(column);
+
+  &__title {
+    color: $deep;
+    text-align: center;
+    font-size: calculate-rem(36);
+    margin-bottom: 35px;
+
+    @include bp-medium {
+      text-align: left;
+    }
+  }
+
+  &__plan-status {
+    color: $deep;
+    text-align: left;
+    font-size: calculate-rem(15);
+    margin-bottom: 7px;
+  }
+
+  &__plan {
+    border: 2px solid $gray-border;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 4px;
+    font-size: calculate-rem(36);
+    color: $deep;
+    opacity: 0.6;
+
+    @include flexbox;
+    @include flex-direction(column);
+
+    @include bp-medium {
+      @include flexbox;
+      @include flex-direction(row);
+      @include justify-content(space-between);
+    }
+
+    &__tax {
+      font-size: calculate-rem(24);
+    }
+  }
+
+  &__plan-cycle {
+    color: $deep;
+    font-size: calculate-rem(14);
+    text-align: right;
+    margin-bottom: 41px;
+  }
+
+  &__subscription-date {
+    font-size: calculate-rem(18);
+    margin-bottom: 21px;
+    text-align: center;
+
+    @include bp-medium {
+      text-align: left;
+    }
+  }
+
+  &__button-container {
+    margin-bottom: 28px;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @include bp-medium {
+      text-align: center;
+      margin-bottom: 40px;
+
+      @include flex-direction(row);
+      @include align-items(initial);
+    }
+
+    &__button--cancel {
+      width: 50%;
+      margin-right: 5px;
+      order: 1;
+
+      @include bp-medium {
+        order: 0;
+        width: 50%;
+      }
+    }
+
+    &__button--confirm {
+      width: 50%;
+      order: 0;
+      margin-bottom: 19px;
+
+      @include bp-medium {
+        order: 1;
+        width: 50%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    @include flexbox;
+    @include flex-direction(row);
+
+    margin: 0 auto 24px;
+
+    @include bp-medium {
+      @include flexbox;
+      @include flex-direction(row);
+      @include align-items(center);
+
+      margin: 0 0 40px;
+    }
+
+    &__icon {
+      height: 40px;
+    }
+
+    &__number {
+      font-size: calculate-rem(26);
+      color: $deep;
+      margin-left: 18px;
+      font-family: $roboto-medium-family;
+
+      @include bp-medium {
+        font-size: calculate-rem(30);
+      }
+    }
+  }
+}

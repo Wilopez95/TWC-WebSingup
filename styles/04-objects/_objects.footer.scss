@@ -1,0 +1,44 @@
+.footer {
+  max-width: $content-max-width;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+
+  &__content {
+    min-height: 128px;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+
+    color: $white;
+    font-size: calculate-rem(14);
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+
+    @include bp-large {
+      @include flex-direction(row);
+      @include justify-content(space-between);
+
+      margin: 0 90px;
+    }
+  }
+
+  &__help {
+    @include flexbox;
+    @include flex-direction(row);
+  }
+
+  &__text {
+    padding: 10px 12px;
+  }
+
+  &__link {
+    padding: 10px 12px;
+  }
+
+  &__link:hover {
+    color: $sinbad;
+  }
+}

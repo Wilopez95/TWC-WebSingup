@@ -1,0 +1,52 @@
+.devices {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-top: 36px;
+
+  &__icon {
+
+    &--tv {
+      width: 96px;
+      height: 60px;
+    }
+
+    &--pc {
+      width: 106px;
+      height: 60px;
+    }
+
+    &--phone {
+      width: 30px;
+      height: 60px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-size: calculate-rem(16);
+    font-family: $roboto;
+  }
+
+  @include bp-medium {
+
+    &__text {
+      font-size: calculate-rem(18);
+    }
+  }
+
+  &__container {
+    padding: 35px 0;
+
+    @include flexbox;
+    @include flex-direction(row);
+
+    @include bp-medium {
+      padding: 25px 0;
+    }
+  }
+
+  &--image {
+    padding-right: 35px;
+  }
+}

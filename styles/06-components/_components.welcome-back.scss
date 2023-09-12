@@ -1,0 +1,76 @@
+.welcome-back {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  color: $white;
+  width: 100%;
+
+  &__already-have {
+
+    &__text-body {
+      margin-top: 15px;
+      max-width: 540px;
+      font-size: calculate-rem(18);
+    }
+
+    &--back-button {
+      width: 100%;
+      margin: 40px 0 22px;
+      max-width: 540px;
+
+      @include bp-medium {
+        margin: 55px 0 20px;
+      }
+
+      @include bp-large {
+        margin: 65px 0 22px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: 20px;
+
+    @include bp-medium {
+      margin-top: 72px;
+    }
+  }
+
+  &__title {
+    font-size: calculate-rem(36);
+    text-align: left;
+  }
+
+  .container-field {
+    @include bp-medium {
+      max-width: 540px;
+    }
+
+    &__label {
+      margin-top: 51px;
+      font-size: calculate-rem(15);
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+
+  &__conditions {
+    margin-top: 22px;
+    font-size: calculate-rem(12);
+    line-height: 18px;
+    margin-bottom: 35px;
+
+    @include bp-medium {
+      max-width: 391px;
+    }
+
+    &__link {
+      color: $sinbad;
+    }
+
+    &__secondary-text {
+      margin-top: 10px;
+    }
+  }
+}

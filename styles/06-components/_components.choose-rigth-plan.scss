@@ -1,0 +1,223 @@
+.choose-rigth-plan {
+  @include flexbox;
+  @include flex-direction(column);
+
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  color: $white;
+  height: 900px;
+
+  @media only screen and (min-width: 555px) {
+    height: 800px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    min-height: 100vh;
+
+    @include flex-direction(row);
+  }
+
+  &__left {
+    width: 100%;
+    margin-top: 17px;
+
+    @media only screen and (min-width: 1200px) {
+      margin-top: 0;
+      width: 40%;
+
+      @include flexbox;
+      @include justify-content(center);
+      @include flex-direction(column);
+    }
+
+    &__title-container {
+
+      &__title {
+        position: relative;
+        display: inline;
+        font-size: calculate-rem(40);
+        line-height: 60px;
+        font-family: $roboto-bold-family;
+
+        @media only screen and (min-width: 400px) {
+          font-size: calculate-rem(48);
+        }
+
+        @media only screen and (min-width: 555px) {
+          font-size: calculate-rem(60);
+          line-height: 84px;
+        }
+
+        @media only screen and (min-width: 1200px) {
+          font-size: calculate-rem(70);
+        }
+      }
+
+      &__title::after {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        height: 1px;
+        border-top: 12px solid $light-blue;
+        border-radius: 6px;
+        content: '';
+        margin-top: 5px;
+
+        @-moz-document url-prefix('') {
+          border-top: 12px solid $transparent;
+        }
+      }
+    }
+
+    &__body-text {
+      margin-top: 40px;
+      font-size: calculate-rem(20);
+      line-height: 30px;
+
+      @media only screen and (min-width: 555px) {
+        font-size: calculate-rem(24);
+        opacity: 60%;
+        line-height: 36px;
+        margin-top: 51px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        max-width: 540px;
+        font-size: calculate-rem(26);
+        margin-top: 62px;
+      }
+    }
+  }
+
+  &__right {
+    width: 100%;
+    margin-top: 34px;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @media only screen and (min-width: 555px) {
+      @include flex-direction(row);
+      @include justify-content(space-between);
+
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      width: 60%;
+      margin-top: 0;
+
+      @include flex-direction(row);
+
+      padding-left: 86px;
+    }
+
+    &__plan {
+      height: 230px;
+      width: 91%;
+      border-radius: 24px;
+      margin-bottom: 11px;
+      font-family: $roboto-medium-family;
+      background: transparent linear-gradient(180deg, #ffffff1a 0%, #ffffff0d 100%) 0% 0%;
+
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(center);
+
+      @media only screen and (min-width: 555px) {
+        height: 325px;
+        width: 47%;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        width: 49%;
+        max-width: 536px;
+        height: 477px;
+        margin-left: 18px;
+      }
+
+      &__title {
+        margin-top: 16px;
+        font-size: calculate-rem(31);
+
+        @media only screen and (min-width: 555px) {
+          font-size: calculate-rem(27);
+          margin-top: 31px;
+        }
+
+        @media only screen and (min-width: 1200px) {
+          margin-top: 42px;
+          font-size: calculate-rem(42);
+        }
+      }
+
+      &__amount-container {
+        @include flexbox;
+        @include flex-direction(row);
+        @include align-items(flex-end);
+
+        margin-top: 15px;
+
+        @media only screen and (min-width: 555px) {
+          margin-top: 50px;
+        }
+
+        @media only screen and (min-width: 1200px) {
+          margin-top: 78px;
+        }
+
+        &__amount {
+          font-size: calculate-rem(50);
+
+          @media only screen and (min-width: 555px) {
+            font-size: calculate-rem(58);
+          }
+
+          @media only screen and (min-width: 1600px) {
+            font-size: calculate-rem(80);
+          }
+        }
+
+        &__amount-prefix {
+          font-size: calculate-rem(25);
+
+          @media only screen and (min-width: 555px) {
+            font-size: calculate-rem(35);
+          }
+
+          @media only screen and (min-width: 1600px) {
+            font-size: calculate-rem(50);
+          }
+        }
+      }
+
+      &__offer-container {
+        height: 32px;
+        font-family: $roboto-family;
+
+        &__text {
+          font-size: calculate-rem(24);
+          opacity: 70%;
+
+          @media only screen and (min-width: 555px) {
+            font-size: calculate-rem(15);
+          }
+
+          @media only screen and (min-width: 1200px) {
+            font-size: calculate-rem(24);
+          }
+        }
+      }
+
+      &__button {
+        margin-top: 10px;
+
+        @media only screen and (min-width: 1200px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

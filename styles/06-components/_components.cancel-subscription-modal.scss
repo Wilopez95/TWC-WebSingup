@@ -1,0 +1,127 @@
+.cancel-subscription {
+  width: 100%;
+  max-width: 540px;
+  color: $deep;
+
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+
+  font-family: $roboto-family;
+
+  &__logo {
+    margin-top: 75px;
+
+    @include bp-medium {
+      margin-top: 15px;
+    }
+
+    &__icon {
+      width: 120px;
+      height: 120px;
+      stroke: $black;
+    }
+  }
+
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+    font-family: $roboto-medium-family;
+    font-size: calculate-rem(27);
+
+    @include bp-medium {
+      font-size: calculate-rem(31);
+    }
+
+    @include bp-large {
+      font-size: calculate-rem(36);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 23px;
+    text-align: center;
+    font-size: calculate-rem(23);
+  }
+
+  &--regular-text {
+    text-align: center;
+    font-size: calculate-rem(18);
+  }
+
+  &__body {
+    margin-top: 30px;
+
+    &--success {
+      max-width: 418px;
+    }
+  }
+
+  &__change-plan {
+    @include flexbox;
+    @include flex-direction(row);
+
+    margin-top: 9px;
+
+    &--click-here-button {
+      color: $sinbad;
+      background-color: transparent;
+      font-size: calculate-rem(18);
+      cursor: pointer;
+
+      &:hover {
+        color: $sinbad-hover;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    margin-top: 30px;
+    border-top: solid 2px $gray-border;
+  }
+
+  &__buttons {
+    margin: 56px 0 45px;
+    width: 100%;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @include bp-large {
+      @include justify-content(space-between);
+      @include flex-direction(row);
+    }
+
+    &--button {
+      margin-bottom: 18px;
+      width: 70%;
+
+      @include bp-medium {
+        width: 65%;
+      }
+
+      @include bp-large {
+        width: 48%;
+      }
+    }
+  }
+
+  &--close {
+    margin: 50px 0;
+    width: 100%;
+
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+
+    &--button {
+      width: 70%;
+
+      @include bp-large {
+        width: 100%;
+      }
+    }
+  }
+}

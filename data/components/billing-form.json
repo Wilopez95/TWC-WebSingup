@@ -1,0 +1,6 @@
+{
+    "title": "Billing Information",
+    "description": "${planTypely} subscription fee of ${planPrice}. Automatically renews for the same subscription period at ${planPrice} per ${planType} unless canceled prior to renewal. All prices are exclusive of tax.",
+    "terms": "By selecting “Agree and Continue” you agree to The Weather Channel app Visitor Agreement & Privacy Notice.",
+    "trial": "7-Day free trial available only to new users. * Indicates required fields." 
+}

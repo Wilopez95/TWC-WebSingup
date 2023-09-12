@@ -1,0 +1,82 @@
+.error-modal {
+  font-family: $roboto-family;
+  color: $deep;
+  width: 100%;
+
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+
+  &__logo {
+    margin-top: 60px;
+  }
+
+  &__container {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &__title {
+    margin-top: 30px;
+    font-size: calculate-rem(24);
+    font-weight: $roboto-medium;
+    text-align: center;
+
+    @include bp-medium {
+      font-size: calculate-rem(30);
+    }
+
+    @include bp-large {
+      font-size: calculate-rem(36);
+    }
+  }
+
+  &__content {
+    margin-top: 12px;
+    font-size: calculate-rem(12);
+    text-align: center;
+    max-width: 222px;
+    line-height: 1.25;
+
+    @include bp-medium {
+      font-size: calculate-rem(15);
+      max-width: 332px;
+    }
+
+    @include bp-large {
+      font-size: calculate-rem(18);
+    }
+  }
+
+  &__frame {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &__button {
+    margin-top: 60px;
+    width: 85%;
+  }
+
+  &__help {
+    margin: 22px 0 20px 0;
+    max-width: 460px;
+    font-size: calculate-rem(18);
+    text-align: center;
+
+    &--link {
+      color: $sinbad;
+
+      &:hover {
+        color: $sinbad-hover;
+      }
+    }
+  }
+}
+
+.icon {
+  height: 120px;
+  width: 120px;
+}

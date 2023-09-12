@@ -1,0 +1,49 @@
+.custom404 {
+  width: 100%;
+  color: $white;
+
+  @include flexbox;
+  @include flex-direction(column);
+
+  max-width: 795px;
+  font-family: $roboto-family;
+
+  &__icon-container {
+    @include flexbox;
+    @include justify-content(center);
+
+    width: 100%;
+    margin-top: 30px;
+
+    &--icon {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-size: calculate-rem(54);
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    opacity: 60%;
+    font-size: calculate-rem(36);
+  }
+
+  &__button {
+    background: transparent;
+    width: 100px;
+    color: $sinbad;
+    font-size: calculate-rem(18);
+    text-align: left;
+    padding-left: 0;
+    margin: 40px 0;
+
+    &:hover {
+      color: $sinbad-hover;
+      background: transparent;
+    }
+  }
+}

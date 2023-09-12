@@ -1,0 +1,70 @@
+.choose-plan-skeleton {
+  max-width: $content-max-width;
+  margin: 0 29px 30px;
+
+  &__title {
+    width: 200px;
+    height: 40px;
+
+    @include bp-large {
+      width: 300px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 5px;
+    height: 24px;
+    width: 350px;
+
+    @include bp-large {
+      width: 624px;
+    }
+  }
+
+  &__container-plan {
+    @include flexbox;
+
+    @include bp-large {
+      max-width: 540px;
+      width: 100%;
+    }
+
+    &__item {
+      border-radius: 6px;
+      width: 185px;
+      height: 166px;
+      margin-top: 35px;
+      margin-right: 20px;
+
+      @include bp-large {
+        width: 255px;
+        height: 166px;
+        margin-top: 50px;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 48px;
+    max-width: 540px;
+  }
+
+  &__text {
+    height: 16px;
+    width: 227px;
+    margin-top: 22px;
+  }
+
+  &__second-text {
+    height: 16px;
+    width: 300px;
+    margin-top: 10px;
+
+    @include bp-large {
+      width: 522px;
+    }
+  }
+}

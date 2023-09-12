@@ -1,0 +1,89 @@
+.signingup {
+  width: 100%;
+  padding: 20px 0;
+  color: $white;
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+
+  &__failed {
+    @include flexbox;
+    @include justify-content(center);
+
+    margin-bottom: 30px;
+
+    @include bp-medium {
+      @include justify-content(flex-start);
+    }
+
+    &--container {
+      text-align: center;
+
+      @include bp-medium {
+        text-align: left;
+      }
+    }
+
+    &--text {
+      font-size: calculate-rem(24);
+      margin-bottom: 6px;
+    }
+  }
+
+  &__subtitle {
+    font-size: calculate-rem(18);
+    opacity: 0.6;
+  }
+
+  &__title {
+    padding: 0 0 50px 0;
+    font-size: calculate-rem(36);
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: calculate-rem(14);
+    padding: 31px 0 12px 0;
+
+    &--body {
+      font-size: calculate-rem(14);
+    }
+  }
+
+  &__label {
+    font-size: calculate-rem(15);
+    padding-bottom: 6px;
+  }
+
+  @include bp-medium {
+    max-width: 522px;
+
+    &__text {
+      font-size: calculate-rem(12);
+      padding: 22px 0 10px 0;
+
+      &--body {
+        font-size: calculate-rem(12);
+        margin-bottom: 140px;
+      }
+    }
+  }
+
+  &__conditions {
+    font-size: calculate-rem(16);
+    max-width: 381px;
+    margin-top: 44px;
+
+    @include bp-medium {
+      font-size: calculate-rem(12);
+      max-width: 392px;
+      margin-top: 22px;
+    }
+
+    &-link {
+      color: $sinbad;
+    }
+  }
+}

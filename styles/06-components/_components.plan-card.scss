@@ -1,0 +1,115 @@
+.plan-card {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  width: 100%;
+
+  &__card-group {
+    margin-top: 22px;
+  }
+
+  &__container-card {
+    margin-top: 12px;
+
+    @include bp-medium {
+      margin-top: 20px;
+      max-width: 1218px;
+
+      @include flexbox;
+    }
+
+    &__content {
+      @include flexbox;
+      @include justify-content(space-between);
+
+      &__plan {
+        font-size: calculate-rem(42);
+        font-weight: $roboto-medium;
+        margin-bottom: 36px;
+        text-align: right;
+
+        &__left {
+          font-size: calculate-rem(42);
+          font-weight: $roboto-medium;
+          margin-bottom: 36px;
+          text-align: right;
+          text-align: left;
+        }
+      }
+
+      &__text {
+        font-size: calculate-rem(24);
+        word-break: break-all;
+
+        @include bp-medium {
+          word-break: keep-all;
+        }
+      }
+    }
+
+    &__title {
+      font-size: calculate-rem(36);
+      color: $deep;
+      margin-bottom: 33px;
+    }
+
+    &__text {
+      font-size: calculate-rem(18);
+
+      &__space-top {
+        font-size: calculate-rem(18);
+        margin-top: 14px;
+      }
+
+      &__space-extra-top {
+        font-size: calculate-rem(18);
+        padding-top: 30px;
+      }
+
+      &__space-bottom {
+        font-size: calculate-rem(18);
+        margin-bottom: 14px;
+      }
+    }
+
+    &__link {
+      color: $sinbad;
+      margin-top: 12px;
+      font-size: calculate-rem(18);
+      text-align: right;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $sinbad-hover;
+      }
+    }
+
+    &__cancel-link {
+      color: $sinbad;
+      margin-top: 0;
+      font-size: calculate-rem(18);
+      text-align: right;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $sinbad-hover;
+      }
+    }
+
+    &__cancel-link-disable {
+      color: $gray;
+      margin-top: 0;
+      font-size: calculate-rem(18);
+      text-align: right;
+      background-color: transparent;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &__line {
+    border-top: solid 2px $gray-border;
+    margin-bottom: 34px;
+  }
+}

@@ -1,0 +1,122 @@
+.charge-modal {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  width: 100%;
+  color: $deep;
+
+  &__red-color {
+    color: $red;
+  }
+
+  &__green-color {
+    color: $green;
+  }
+
+  &__title {
+    font-size: calculate-rem(36);
+    margin-bottom: 15px;
+    margin-top: 39px;
+    margin-left: 20px;
+
+    @include bp-medium {
+      margin-left: 60px;
+    }
+  }
+
+  &__container {
+    @include flexbox;
+
+    padding: 15px;
+
+    @include bp-medium {
+      @include justify-content(center);
+    }
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  &__table {
+    font-size: calculate-rem(12);
+    max-width: 372px;
+    border-collapse: collapse;
+    width: 100%;
+
+    @include bp-large {
+      font-size: calculate-rem(18);
+      max-width: 540px;
+    }
+
+    &__header {
+      width: 100%;
+      text-align: left;
+      padding-bottom: 12px;
+      font-size: calculate-rem(18);
+
+      @include bp-large {
+        min-width: 125px;
+      }
+    }
+
+    &__body {
+      border: 1px solid $gray;
+    }
+
+    &__data {
+      width: 100%;
+      text-align: left;
+      padding: 12px 0;
+
+      @include bp-large {
+        min-width: 125px;
+      }
+    }
+
+    &__space-left {
+      padding-left: 30px;
+    }
+
+    &__content {
+      overflow-y: scroll;
+      height: 330px;
+    }
+
+    th {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    td {
+      text-align: center;
+    }
+  }
+
+  &__button-container {
+    width: 100%;
+
+    @include flexbox;
+    @include justify-content(center);
+
+    &__button {
+      min-width: 261px;
+      width: 100%;
+
+      @include bp-large {
+        min-width: 430px;
+      }
+    }
+  }
+
+  &__disclaimer {
+    font-size: calculate-rem(14);
+    margin-top: 31px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @include bp-large {
+      margin-bottom: 23px;
+    }
+  }
+}

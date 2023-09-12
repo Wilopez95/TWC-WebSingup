@@ -1,0 +1,102 @@
+.billing-form {
+  background: transparent;
+  color: $white;
+  font-family: $roboto-family;
+  max-width: 876px;
+
+  &--tooltipDark {
+    fill: $deep;
+  }
+
+  &__fieldLabel {
+    font-size: calculate-rem(15);
+    font-family: $roboto-family;
+    font-weight: $roboto-regular;
+    padding-bottom: 6px;
+
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+
+  &__fieldSelect {
+    height: 47px;
+    padding: 0 10px;
+  }
+
+  &__row {
+    @include flexbox;
+    @include flex-direction(column);
+
+    &__dzc {
+      @include flexbox;
+      @include align-items(flex-end);
+    }
+
+    @include bp-large {
+      @include flexbox;
+      @include flex-direction(row);
+    }
+  }
+
+  &--is-modal {
+    @include flexbox;
+    @include flex-direction(column);
+  }
+
+  &__title {
+    font-size: calculate-rem(36);
+    margin-bottom: 48px;
+  }
+
+  &__description {
+    font-size: calculate-rem(12);
+    margin-top: 40px;
+    margin-bottom: 12px;
+
+    @include bp-medium {
+      font-size: calculate-rem(14);
+    }
+
+    @include bp-large {
+      font-size: calculate-rem(16);
+    }
+  }
+
+  &__terms {
+    font-size: calculate-rem(12);
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    margin-bottom: 22px;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  &__trial {
+    font-size: calculate-rem(12);
+  }
+
+  &__modal-footer {
+    width: 100%;
+
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @include bp-medium {
+      @include justify-content(space-between);
+      @include flex-direction(row-reverse);
+    }
+
+    &__button {
+      max-width: 261px;
+      width: 70%;
+      margin-bottom: 18px;
+
+      @include bp-medium {
+        width: 48%;
+      }
+    }
+  }
+}

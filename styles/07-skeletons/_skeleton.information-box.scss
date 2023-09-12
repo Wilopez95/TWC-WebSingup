@@ -1,0 +1,27 @@
+.information-box-skeleton {
+  max-width: $content-max-width;
+  margin: 0 29px 30px;
+  background: $ciel 0% 0% no-repeat padding-box;
+  min-height: 584px;
+  padding: 14px 16px;
+
+  &__title {
+    height: 39px;
+    max-width: 400px;
+    width: 75%;
+    margin-bottom: 30px;
+  }
+
+  &__body-text {
+    height: 15px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 10px;
+
+    &__secondary {
+      max-width: 600px;
+      height: 15px;
+      margin-top: 10px;
+    }
+  }
+}

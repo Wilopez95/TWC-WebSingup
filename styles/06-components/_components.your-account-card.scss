@@ -1,0 +1,36 @@
+.your-account-card {
+  font-family: $roboto-family;
+  font-weight: $roboto-regular;
+  width: 100%;
+
+  &__card-group {
+    margin-bottom: 18px;
+  }
+
+  &__container-card {
+    margin-top: 12px;
+
+    @include bp-medium {
+      margin-top: 20px;
+      max-width: 1218px;
+
+      @include flexbox;
+    }
+
+    &__title {
+      font-size: calculate-rem(36);
+      color: $deep;
+      margin-bottom: 33px;
+    }
+
+    &__text {
+      font-size: calculate-rem(18);
+
+      &__space-top {
+        font-size: calculate-rem(18);
+        margin-top: 14px;
+        word-break: break-word;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * Colors
+ *
+ * For colors that are not easily named, lets use https://chir.ag/projects/name-that-color/
+ */
+
+/* Primary Colors */
+$black: #000;
+$white: #fff;
+$red: #ff0f34;
+$green: #008000;
+$red-hover: #cc0c29;
+$midnight: #1b2533;
+
+$black-pearl: #041424;
+$blue-background: #28384d;
+$light-white: #f8f8f9;
+$sinbad: #279cea;
+$sinbad-hover: #1f7bb8;
+$shadow: #639fb6;
+$light-blue: #00a7ff;
+
+/* Secondary Colors */
+$deep: #1f2c3d;
+$gray-border: #dcdcdc;
+$light-gray: #ebebeb;
+$gray: #747474;
+$dove-gray: #00000029;
+$ship-cove: #719eb3;
+$dark: #202d3e;
+
+$ground: #ffffff1a;
+$ciel: #ffffff0d;
+
+/* Utils */
+$transparent: rgb(0 0 0 / 0%);
+$white-transparent: rgb(255 255 255 / 0%);
+$white-full-opacity: rgb(255 255 255 / 100%);
+$black-semi-transparent: rgb(0 0 0 / 50%);
+$black-full-opacity: rgb(0 0 0 / 100%);
+$modal-background: rgb(11 15 20 / 50%);
+$skeleton-background: rgb(0 0 0 / 11%);
+$text-area-border: #707070;

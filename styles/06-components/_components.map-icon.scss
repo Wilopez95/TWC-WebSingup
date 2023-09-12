@@ -1,0 +1,30 @@
+.icon-map {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+
+  max-width: 60px;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+
+    @include bp-medium {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__text {
+    font-family: $roboto-family;
+    text-align: center;
+    margin-top: 16px;
+    font-size: calculate-rem(14);
+    color: $white;
+    opacity: 70%;
+
+    @include bp-medium {
+      font-size: calculate-rem(15);
+    }
+  }
+}

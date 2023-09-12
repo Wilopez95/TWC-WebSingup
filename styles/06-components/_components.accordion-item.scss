@@ -1,0 +1,77 @@
+.accordion-item {
+  background: $ground 0% 0% no-repeat padding-box;
+  margin-bottom: 9px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &__container {
+    cursor: pointer;
+    height: 120px;
+    margin-left: 18px;
+
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  &__title {
+    color: $white;
+    font-size: calculate-rem(16);
+    font-family: $roboto-bold-family;
+    width: 75%;
+
+    @include bp-medium {
+      font-size: calculate-rem(24);
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    fill: $shadow;
+    stroke: none;
+    height: 20px;
+    width: 26px;
+    margin-right: 10px;
+
+    &--active {
+      fill: $ship-cove;
+    }
+  }
+
+  &__paragraph {
+    color: $white;
+    font-size: calculate-rem(14);
+    font-family: $roboto-family;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    height: 0;
+    line-height: 28px;
+    width: 94%;
+    margin-left: 18px;
+
+    @include bp-medium {
+      font-size: calculate-rem(18);
+    }
+
+    &--active {
+      height: auto;
+      padding: 5px 0 20px 0;
+    }
+  }
+
+  &--active {
+    background: $ciel 0% 0% no-repeat padding-box;
+  }
+
+  &::after {
+    content: '';
+    width: 96vw;
+    display: block;
+
+    @include bp-medium {
+      content: none;
+    }
+  }
+}

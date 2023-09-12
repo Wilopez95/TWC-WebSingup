@@ -1,0 +1,39 @@
+.accordion-skeleton {
+  max-width: $content-max-width;
+  margin: 0 29px 30px;
+
+  @include bp-medium {
+    margin: 0 auto 50px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    width: 210px;
+    height: 129px;
+    margin-bottom: 40px;
+
+    @include bp-medium {
+      width: 600px;
+      height: 62px;
+    }
+  }
+
+  &__item {
+    @include flexbox;
+    @include justify-content(space-between);
+
+    padding: 60px 30px;
+    border: 2px solid $dove-gray;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    width: 70%;
+    height: 28px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
